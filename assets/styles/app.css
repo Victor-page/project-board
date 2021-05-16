@@ -26,14 +26,19 @@ body {
 
 .stop-analytics {
   position: absolute;
-  top: 0;
+  top: 4.7rem;
   left: 0;
   width: 100%;
-  text-align: right;
+  text-align: center;
 }
 
 #stop-analytics-btn {
   padding: 0;
+}
+
+#stop-analytics-btn:hover {
+  background: white;
+  color: #ff0062;
 }
 
 ul {
