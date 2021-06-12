@@ -1,7 +1,11 @@
 import { ProjectList } from './App/ProjectList.js';
 
 globalThis.DEFAULT_VALUE = 'MAX';
-console.log(globalThis);
+
+console.log(ProjectItem);
+ProjectItem.age = 134;
+console.log(ProjectItem);
+import { ProjectItem } from './App/ProjectList.js';
 
 class App {
   static init() {

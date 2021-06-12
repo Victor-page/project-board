@@ -1,7 +1,10 @@
 import { ProjectItem as PrjItem } from './ProjectItem.js';
 import * as DOMHelp from '../Utility/DOMHelper.js';
 
-const ProjectItem = 'abc';
+export let ProjectItem = { name: 'john' };
+setTimeout(() => {
+  console.log(ProjectItem);
+}, 3000);
 
 export class ProjectList {
   projects = [];
