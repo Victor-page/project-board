@@ -1,7 +1,7 @@
 import { DOMHelper } from '../Utility/DOMHelper';
-// import { Tooltip } from './Tooltip.js';
+// import { Tooltip } from './Tooltip';
 
-export default class ProjectItem {
+export class ProjectItem {
   // hasActiveTooltip = false;
 
   constructor(id, updateProjectListsFunction, type) {
@@ -20,6 +20,7 @@ export default class ProjectItem {
     const projectElement = document.getElementById(this.id);
     const tooltipText = projectElement.dataset.extraInfo;
     import('./Tooltip').then((module) => {
+      console.log(module);
       const tooltip = new module.Tooltip(
         () => {
           this.hasActiveTooltip = false;

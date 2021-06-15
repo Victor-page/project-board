@@ -1,6 +1,6 @@
-import { default as Component } from './Component';
+import Component from './Component';
 
-export default class Tooltip extends Component {
+export class Tooltip extends Component {
   constructor(closeNotifierFunction, text, hostElementId) {
     super(hostElementId);
     this.closeNotifier = closeNotifierFunction;
@@ -29,8 +29,8 @@ export default class Tooltip extends Component {
     const y = hostElPosTop + hostElHeight - parentElementScrolling - 10;
 
     tooltipElement.style.position = 'absolute';
-    tooltipElement.style.left = x + 'px';
-    tooltipElement.style.top = y + 'px';
+    tooltipElement.style.left = `${x}px`;
+    tooltipElement.style.top = `${y}px`;
 
     tooltipElement.addEventListener('click', this.closeTooltip);
     this.element = tooltipElement;
